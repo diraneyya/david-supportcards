@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@700&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Righteous", cursive;
+  min-height: 100vh;
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+}
+
+body h1 {
+    margin: 0 10vw;
+}
+
+.container {
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 35px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 15px;
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.card .face {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .face.face1 {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.content h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Emoji', sans-serif;
+  font-size: 200%;
+  text-align: center;
+}
+
+.content a {
+    font-style: italic;
+    margin: 0 0.5ch;
+    text-decoration: underline;
+    text-decoration-color: #fffc00; 
+}
+
+.content h2, .content p {
+  background-color: #fffc00;
+  /* #00fffc #fc00ff */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+
+.card .face.face2 {
+  transition: 0.5s;
+}
+
+.card .face.face2 h2 {
+  margin: 0;
+  padding: 0;
+  font-size: fit-content;
+  color: #fff;
+  transition: 0.5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.card:hover .face.face2 {
+  height: 60px;
+}
+
+.card:hover .face.face2 h2 {
+  font-size: 2em;
+}
+
+.card:nth-child(3n+1) .face.face2 {
+  background-image: linear-gradient(
+    40deg,
+    #fffc00 0%,
+    #fc00ff 45%,
+    #00fffc 100%
+  );
+  border-radius: 15px;
+}
+
+.card:nth-child(3n+2) .face.face2 {
+  background-image: linear-gradient(
+    40deg,
+    #fc00ff 0%,
+    #00fffc 45%,
+    #fffc00 100%
+  );
+  border-radius: 15px;
+}
+
+.card:nth-child(3n+3) .face.face2 {
+  background-image: linear-gradient(
+    40deg,
+    #00fffc 0%,
+    #fc00ff 45%,
+    #fffc00 100%
+  );
+  
+  border-radius: 15px;
+}

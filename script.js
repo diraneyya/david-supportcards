@@ -28,18 +28,17 @@ const supportCardData = [
             target="_blank">song</a> for you, beautiful
         `,
   },
-  /*
-  // SARAH PLEASE UNCOMMENT THIS PART BY REMOVING the forward slash asterisk in
-  // line 31 and the asterisl forward slash in line 42 and filling your message
+
   {
     name: "Sarah",
-    emoji: "placeholder",
-    title: "placeholder",
+    emoji: "💜🌈💛",
+    title: "Sending soothing vibes",
     paragraph: `
-            placeholder
+            For a healing change of <a href="https://www.youtube.com/watch?v=vPhg6sc1Mk4&ab_channel=NaturalezaViva-SonidosyPaisajesIncre%C3%ADbles">location</a>
+            without moving.
         `,
   },
-  */
+  
   {
     name: "Lisa",
     emoji: "💗💫",

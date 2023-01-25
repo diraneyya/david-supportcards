@@ -41,7 +41,7 @@ const supportCardData = [
         emoji: "placeholder",
         title: "placeholder",
         paragraph: `
-            placeholder
+            placeholder 
         `
     },
     {
@@ -54,10 +54,10 @@ const supportCardData = [
     },
     {
         name: "Nadia",
-        emoji: "placeholder",
-        title: "placeholder",
+        emoji: ":dizzy: :smile_cat: :sparkles:",
+        title: "Here for yoy",
         paragraph: `
-            placeholder
+            Lovely <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"_blank">videoclip</a> to cheer you up!
         `
     },
     {

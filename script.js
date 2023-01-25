@@ -57,7 +57,7 @@ const supportCardData = [
   },
   {
     name: "Nadia",
-    emoji: ":dizzy: :smile_cat: :sparkles:",
+    emoji: "💫 🐱 ✨",
     title: "Here for yoy",
     paragraph: `
             Lovely <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"_blank">videoclip</a> to cheer you up!

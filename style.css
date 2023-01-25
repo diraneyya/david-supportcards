@@ -5,7 +5,7 @@
     display: flex;
     transition: opacity 1s ease-out 1s;
     opacity: 1.0;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;

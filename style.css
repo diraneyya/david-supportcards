@@ -15,13 +15,14 @@ body {
 }
 
 body h1 {
+    padding-top: 0.33em;
     margin: 0 10vw;
 }
 
 .container {
   max-width: 100vw;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 35px;
   margin: 0 auto;
   padding: 40px 0;

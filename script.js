@@ -81,32 +81,109 @@ const supportCardData = [
         `,
   },
 ];
+const shuffledCardData = 
+    supportCardData.sort((a, b) => 0.5 - Math.random());
 
 /**
  * STUDENT PARTICIPANT
  * DO NOT UPDATE THIS PART
  */
+
+// Mount backdrop handlers
+let backdropState = {
+    answer: null,
+    clicked: []
+};
+
+addEventListener('load', initializeApplication);
+function initializeApplication() {
+    const backdrop = document.querySelector('#backdrop');
+
+    function showBackdrop(answer) {
+        backdropState.answer = answer;
+        backdrop.style.display = 'flex';
+        backdrop.style.opacity = 1.0;
+    }
+    const lovelies = document.querySelectorAll('.lovelies span');
+    function hideBackdrop() {
+        if (backdrop.style.display === 'none') return;
+
+        for (let [index, button] of Object.entries(lovelies)) {
+            button.classList.remove('wrong');
+            button.classList.remove('right');
+        }
+        backdropState.answer = null;
+        backdrop.style.display = 'none';
+        backdrop.style.opacity = 1.0;
+    }
+
+    hideBackdrop();
+    backdrop.addEventListener('click', hideBackdrop);
+
+    const buttons = document.querySelectorAll('.content .stars');
+    console.assert(buttons.length === supportCardData.length, {
+        error: `"who am I" buttons not found (length: ${buttons.length})`});
+    for (let [index, button] of Object.entries(buttons)) {
+        button.addEventListener('click', event => {
+            console.dir(shuffledCardData[index]);
+            showBackdrop(shuffledCardData[index].name);
+            event.stopPropagation();
+        })
+    }
+
+    console.assert(lovelies.length === supportCardData.length, {
+        error: `"lovely person" buttons not found (length: ${buttons.length})`});
+    for (let [index, button] of Object.entries(lovelies)) {
+        button.addEventListener('click', event => {
+            console.assert(backdropState.answer !== null);
+            if (backdropState.answer === null)
+                console.error("Backdrop launched without an answer in state");
+            if (lovelies[index].innerText === backdropState.answer) {
+                lovelies[index].classList.add('right');
+                for (let [index2, button] of Object.entries(lovelies))
+                    if (index2 !== index) button.classList.add('wrong');
+                backdrop.style.opacity = 0.0;
+                setTimeout(1000, hideBackdrop);
+            } else {
+                lovelies[index].classList.add('wrong');
+            }
+
+            event.stopPropagation();
+        })
+    }
+}
+
+// Templating code
 if ("content" in document.createElement("template")) {
   // Grab the support-card template from the page
-  const template = document.querySelector("#supportcard");
+  const cardTemplate = document.querySelector("#supportcard");
+  const personTemplate = document.querySelector("#lovelyperson");
 
-  const shuffledCardData = supportCardData.sort((a, b) => 0.5 - Math.random());
   for (supportCard of shuffledCardData) {
     // Clone the support card, modify its fields and insert
-    // it into the document
-    const clone = template.content.cloneNode(true);
-    const fields = clone.querySelectorAll("#field");
+    // it in place
+    let clone = cardTemplate.content.cloneNode(true);
+    let fields = clone.querySelectorAll("#field");
+    clone.dataset = {name: supportCard.name};
     fields[0].textContent = supportCard.emoji;
     if (/<([^> ]+)[^>]+>.*<\/\1>/s.test(supportCard.paragraph))
       fields[1].innerHTML = supportCard.paragraph;
     else fields[1].textContent = supportCard.paragraph;
     fields[2].textContent = supportCard.title;
 
-    document.querySelector(".container").appendChild(clone);
+    cardTemplate.parentElement.appendChild(clone);
+
+    // Clone the lovely person choice box, modify its field
+    // and insert it in place
+    clone = personTemplate.content.cloneNode(true);
+    fields = clone.querySelectorAll("#field");
+    fields[0].textContent = supportCard.name;
+
+    personTemplate.parentElement.appendChild(clone);
   }
 } else {
   // Find another way to add the rows to the table because
-  // the HTML template element is not supported.
+  // the HTML cardTemplate element is not supported.
   document.body.innerHTML = `
     <div class="container">
         <div class="face face2">

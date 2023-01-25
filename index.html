@@ -5,26 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Support Cards for David Figuera</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>David, these are support messages from your classmates (you can scroll down):</h1>
+    <div id="backdrop">
+      <div>
+        <h1>Which beautiful soul you think wrote this one?</h1>
+        <div class="lovelies">
+          <template id="lovelyperson">
+            <span class="lovelyperson">
+              <a href="#" id="field"></a>
+            </span>
+          </template>
+        </div>
+      </div>
+    </div>
+    <h1>
+      David, these are support messages from your classmates<br />
+      (you can scroll down):
+    </h1>
     <div class="container">
-        <template id="supportcard">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <span class="stars"></span>
-                        <h2 id="field"></h2>
-                        <p id="field"></p>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2 id="field">Number</h2>
-                </div>
+      <template id="supportcard">
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <span class="stars"><a href="#"> who am I? </a></span>
+              <h2 id="field"></h2>
+              <p id="field"></p>
             </div>
-        </template>
+          </div>
+          <div class="face face2">
+            <h2 id="field">Number</h2>
+          </div>
+        </div>
+      </template>
     </div>
   </body>
 </html>

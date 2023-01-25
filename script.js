@@ -46,7 +46,7 @@ const supportCardData = [
     },
     {
         name: "Yevhenii",
-        emoji: "💜🙌🖤🙌💜",
+        emoji: "❤️❤️❤️❤️❤️",
         title: "Positive vibes",
         paragraph: `
             Hope this <a href="https://open.spotify.com/track/2grjqo0Frpf2okIBiifQKs?si=28bd3ebf01944db2"

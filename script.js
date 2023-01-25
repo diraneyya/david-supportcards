@@ -30,11 +30,10 @@ const supportCardData = [
     },
     {
         name: "Sarah",
-        emoji: "💜🌈💛",
-        title: "Sending soothing vibes",
+        emoji: "placeholder",
+        title: "placeholder",
         paragraph: `
-            For a healing change of <a href="https://www.youtube.com/watch?v=vPhg6sc1Mk4&ab_channel=NaturalezaViva-SonidosyPaisajesIncre%C3%ADbles">location</a> 
-            without moving.
+            placeholder
         `
     },
     {
@@ -47,10 +46,11 @@ const supportCardData = [
     },
     {
         name: "Yevhenii",
-        emoji: "placeholder",
-        title: "placeholder",
+        emoji: "💜🙌🖤🙌💜",
+        title: "Positive vibes",
         paragraph: `
-            placeholder
+            Hope this <a href="https://open.spotify.com/track/2grjqo0Frpf2okIBiifQKs?si=28bd3ebf01944db2"
+            target="_blank">song</a> will cheer you up
         `
     },
     {

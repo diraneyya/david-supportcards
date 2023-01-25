@@ -65,10 +65,10 @@ const supportCardData = [
   },
   {
     name: "Alisa",
-    emoji: "placeholder",
-    title: "placeholder",
+    emoji: "💛 💪 🧘",
+    title: "Hang in there!",
     paragraph: `
-            placeholder
+    Sending you strength and support. Remember to take care of yourself and give yourself time to process and heal.
         `,
   },
   {

@@ -38,10 +38,12 @@ const supportCardData = [
     },
     {
         name: "Lisa",
-        emoji: "placeholder",
-        title: "placeholder",
+        emoji: "💗💫",
+        title: "Hugs & strengths",
         paragraph: `
-            placeholder 
+            I am very sorry for your loss.. Think of all the beautiful strolls, cuddles and best-buddy times you had. 
+            I dont know you that long, yet, from what I know I can only imagine he had a true best friend in you and a beautiful life. 
+            Feel hugged xox
         `
     },
     {
